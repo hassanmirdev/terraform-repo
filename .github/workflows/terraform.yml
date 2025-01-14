@@ -31,10 +31,10 @@ jobs:
         aws-region: "us-east-1"
 
     - name: Terraform Init
-      run: terraform init terraform-github/
+      run: terraform init
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve terraform-github/
+      run: terraform apply -auto-approve
 
     - name: Terraform Output
-      run: terraform output -json terraform-github/
+      run: terraform output -json
