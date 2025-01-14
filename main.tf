@@ -46,3 +46,14 @@ resource "aws_route_table_association" "subnet_b_association" {
   route_table_id = aws_route_table.rtable.id
 }
 
+terraform {
+backend "s3" {
+bucket = "terraform-state-bucket-hassan"
+key = "github/terrafor.tfstate"
+region = "us-east-1"
+encrypt = true
+dynamodb_table = "terraform-lock-table"
+acl = "bucket-owner-full-control" # S3 bucket ACL for access control
+}
+}
+
