@@ -2,12 +2,13 @@ name: Terraform AWS VPC Deployment
 run-name: vpc creation
 
 on:
-  push:
-    branches:
-      - main  # Trigger workflow on pushes to the 'main' branch
-  pull_request:
-    branches:
-      - main  # Trigger workflow on PRs targeting 'main'
+  workflow_dispatch:
+ # push:
+ # branches:
+ # - main  # Trigger workflow on pushes to the 'main' branch
+ # pull_request:
+ # branches:
+ #- main  # Trigger workflow on PRs targeting 'main'
 
 jobs:
   terraform:
