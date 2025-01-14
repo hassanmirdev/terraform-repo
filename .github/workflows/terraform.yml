@@ -33,9 +33,10 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
+      
 
-    - name: Terraform Apply
-      run: terraform apply -auto-approve
+    - name: Terraform Apply 
+      run: terraform apply -auto-approve -lock=false
 
     - name: Terraform Output
       run: terraform output -json
