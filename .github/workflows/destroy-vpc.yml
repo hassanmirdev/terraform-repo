@@ -1,12 +1,7 @@
 name: Destroy the VPC infrastructure.
 run-name: Destroy VPC
 on:
-  push:
-    branches:
-      - main  # Trigger workflow on pushes to the 'main' branch
-  pull_request:
-    branches:
-      - main  # Trigger workflow on PRs targeting 'main'
+  workflow_dispatch:
 
 jobs:
   terraform-destroy:
