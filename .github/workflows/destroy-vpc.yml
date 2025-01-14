@@ -25,9 +25,6 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
-   
-    - name: show statefiles
-      run: terraform show
-
+      
     - name: Terraform Destroy
       run: terraform destroy -auto-approve
