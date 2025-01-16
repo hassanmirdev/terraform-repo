@@ -1,4 +1,4 @@
-name: Destroy the VPC infrastructure.
+name: Destroy the VPC infrastructure
 run-name: Destroy VPC
 on:
   workflow_dispatch:
